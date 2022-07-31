@@ -14,14 +14,18 @@
      <br>
     <table border="1">
         <tr>
+            <th>update</th>
             <th>First NAMe</th>
             <th>Last NAMe</th>
+            <th>Delete</th>
 
         </tr>
         {% for i in data%}
         <tr>
+            <td> <a href="update/{{i.id}}">update</a>
             <td> {{i.F_Name}}</td>
             <td> {{i.L_Name}}</td>
+            <td> <a href="delete/{{i.id}}">delete</a>
 
         </tr>
         {%endfor%}
@@ -31,6 +35,6 @@
     {{Form}}
     <input type="submit" value="submit">
     </form> -->
-    <a href="{% url 'update' data='1' %}">Update Page Click Here</a>
+   
 </body>
 </html>
